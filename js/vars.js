@@ -91,7 +91,7 @@ CSS.registerProperty({
 });
 
 CSS.registerProperty({
-  name: '--fancy-crossed-out-stroke_width',
+  name: '--fancy-crossed-out-stroke-width',
   syntax: '<integer>',
   initialValue: '1',
   inherits: false

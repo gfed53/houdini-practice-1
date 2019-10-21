@@ -6,6 +6,7 @@ class FancyCrossedOut {
       '--stroke-color',
       '--fancy-crossed-out-skew',
       '--fancy-crossed-out-evenness',
+      '--fancy-crossed-out-stroke-width',
     ];
   }
 
@@ -25,6 +26,7 @@ class FancyCrossedOut {
         yEnd = size.height,
         skew = props.get('--fancy-crossed-out-skew').value,
         evenness = props.get('--fancy-crossed-out-evenness').value,
+        strokeWidth = props.get('--fancy-crossed-out-stroke-width'),
         lineHeightOffset = props.get('line-height').value,
         lineCount = 0,
         debugCountY = 0;
@@ -33,6 +35,8 @@ class FancyCrossedOut {
     console.log('evenness', evenness);
     // console.log('y', y);
     // console.log('yEnd', yEnd);
+
+    ctx.lineWidth = strokeWidth.value;
 
 
 

@@ -37,12 +37,15 @@ p {
   /* background-image: paint(fancy-crossed-out); */
   --stroke-color: rgba(230, 230, 230, 0.699);
   --fill-color: rgba(230, 230, 230, 0.699);
-  --slashes-bg-skew: 30;
-  --fancy-crossed-out-skew: 30;
-  --fancy-crossed-out-evenness: 0.75;
   --spacing: 30;
   --number-of-rects: 5;
+  --slashes-bg-skew: 30;
+
   line-height: 1.5em;
+  --fancy-crossed-out-stroke-width: 1;
+  --fancy-crossed-out-skew: 20;
+  --fancy-crossed-out-evenness: 0.55;
+
 }
 
 /* Keyframes */

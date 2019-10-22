@@ -1,13 +1,13 @@
-/* .container {
-  width: 300px;
-  height: 300px;
+.container {
+  /* width: 300px;
+  height: 300px; */
   background: linear-gradient(white, var(--color-stop));
   transition: --color-stop 1s;
 }
 
 .container:hover {
   --color-stop: black;
-} */
+}
 
 .shimmer-bg {
   border-radius: 15px;
@@ -41,7 +41,7 @@ p {
   --number-of-rects: 5;
   --slashes-bg-skew: 30;
 
-  line-height: 1.5em;
+  line-height: 1em;
   --fancy-crossed-out-stroke-width: 1;
   --fancy-crossed-out-skew: 20;
   --fancy-crossed-out-evenness: 0.55;

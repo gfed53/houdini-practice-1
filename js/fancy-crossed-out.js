@@ -22,7 +22,7 @@ class FancyCrossedOut {
 
     let x = 0,
         xEnd = size.width,
-        y = 15,
+        y = props.get('line-height').value * 0.66666,
         yEnd = size.height,
         skew = props.get('--fancy-crossed-out-skew').value,
         evenness = props.get('--fancy-crossed-out-evenness').value,
@@ -38,15 +38,12 @@ class FancyCrossedOut {
 
     ctx.lineWidth = strokeWidth.value;
 
-
-
     // Make sure we limit line slashes to content height.
     while (y < yEnd && debugCountY < 100) {
       // console.log('y', y);
       let yOffset = y + (lineCount * lineHeightOffset);
-
       let xLeft = x;
-      // let skew = 25;
+
       // for testing
       let debugCountX = 0;
 

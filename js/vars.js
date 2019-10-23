@@ -110,3 +110,10 @@ CSS.registerProperty({
   initialValue: '1',
   inherits: false
 });
+
+// CSS.registerProperty({
+//   name: '--fancy-crossed-out-evenness-random',
+//   syntax: '<custom-ident>',
+//   initialValue: '25',
+//   inherits: false
+// });

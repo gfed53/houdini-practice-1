@@ -33,7 +33,7 @@ p {
   /* padding: 2em; */
   /* background-image: paint(roof-border); */
   /* background-image: paint(slashes-bg), paint(fancy-crossed-out); */
-  background-image: paint(fancy-crossed-out);
+  background-image: paint(slashes-bg);
   /* background-image: paint(fancy-crossed-out); */
   --stroke-color: rgba(230, 230, 230, 0.699);
   --fill-color: rgba(230, 230, 230, 0.699);
@@ -43,9 +43,9 @@ p {
 
   line-height: 1em;
   --fancy-crossed-out-stroke-width: 1;
-  --fancy-crossed-out-skew: 20;
-  --fancy-crossed-out-evenness: 0.55;
-
+  --fancy-crossed-out-skew: -1;
+  --fancy-crossed-out-evenness: -1;
+  /* --fancy-crossed-out-evenness-random: 'true'; */
 }
 
 /* Keyframes */

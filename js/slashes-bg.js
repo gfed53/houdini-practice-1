@@ -13,13 +13,14 @@ class SlashesBg {
 
   paint(ctx, size, props) {
     // console.log('ctx', ctx);
-    // console.log('size', size);
+    console.log('size', size);
     // console.log('props', props);
 
     let x = size.width * 0.95,
-        y = 10,
+        y = (size.height * 0.1),
         rectWidth = props.get( '--rect-width' ),
-        rectHeight = size.height - 35,
+        // rectHeight = size.height - 35,
+        rectHeight = size.height - (size.height * 0.15),
         spacing = props.get( '--spacing' ),
         skew = props.get( '--slashes-bg-skew' );
 

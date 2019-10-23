@@ -6,6 +6,7 @@ class FancyCrossedOut {
       '--stroke-color',
       '--fancy-crossed-out-skew',
       '--fancy-crossed-out-evenness',
+      '--fancy-crossed-out-evenness-random',
       '--fancy-crossed-out-stroke-width',
     ];
   }
@@ -31,8 +32,10 @@ class FancyCrossedOut {
         lineCount = 0,
         debugCountY = 0;
 
+    // An example of the CSS Typed OM. Don't remove these logs!
     console.log('skew', skew);
     console.log('evenness', evenness);
+
     // console.log('y', y);
     // console.log('yEnd', yEnd);
 
@@ -47,8 +50,16 @@ class FancyCrossedOut {
       // for testing
       let debugCountX = 0;
 
+
       // Limit each zig-zag line slash width to content width
       while (xLeft < xEnd && debugCountX < 100) {
+        // random scribble
+        if(props.get('--fancy-crossed-out-evenness').value === -1){
+          evenness = Math.random();
+        }
+        if(props.get('--fancy-crossed-out-skew').value === -1){
+          skew = Math.floor(Math.random() * 70);
+        }
         let xRight = xLeft + skew;
         let xMid = xLeft + (skew / evenness);
         ctx.beginPath();

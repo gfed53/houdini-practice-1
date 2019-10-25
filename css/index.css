@@ -24,28 +24,71 @@ body {
 
 h1 {
   font-size: 3em;
-  margin-top: 3em;
+  margin: 2em 0;
   padding: .2em;
   background-image: paint(simonbg);
 }
 
+h1.more-circles {
+  
+}
+
 p {
-  /* padding: 2em; */
-  /* background-image: paint(roof-border); */
-  /* background-image: paint(slashes-bg), paint(fancy-crossed-out); */
-  background-image: paint(slashes-bg);
-  /* background-image: paint(fancy-crossed-out); */
+
+  line-height: 1em;
+  
+  /* --slashes-bg defaults */
   --stroke-color: rgba(230, 230, 230, 0.699);
   --fill-color: rgba(230, 230, 230, 0.699);
   --spacing: 30;
   --number-of-rects: 5;
   --slashes-bg-skew: 30;
 
-  line-height: 1em;
+  
+
+  /* --fancy-crossed-out defaults */
   --fancy-crossed-out-stroke-width: 1;
-  --fancy-crossed-out-skew: -1;
-  --fancy-crossed-out-evenness: -1;
+
+  /* --fancy-crossed-out-skew: -1; */
+  /* --fancy-crossed-out-evenness: -1; */
+
+  --fancy-crossed-out-skew: 40;
+  --fancy-crossed-out-evenness: 0.75;
   /* --fancy-crossed-out-evenness-random: 'true'; */
+}
+
+p.bg-slashes {
+  background-image: paint(slashes-bg);
+  /* transition: --number-of-rects 250ms ease-in-out; */
+  /* transition: --slashes-bg-skew 250ms ease-in-out; */
+  transition-property: --slashes-bg-skew, --number-of-rects;
+  transition-duration: 250ms;
+}
+
+p.bg-slashes:hover {
+  --slashes-bg-skew: 50;
+  --number-of-rects: 10;
+}
+
+p.fancy-crossed-out {
+  background-image: paint(fancy-crossed-out);
+  /* transition: --fancy-crossed-out-skew 250ms; */
+  /* transition: --fancy-crossed-out-evenness 250ms ease-in-out; */
+  transition-property: --fancy-crossed-out-skew, --fancy-crossed-out-evenness;
+  transition-duration: 250ms;
+}
+
+p.fancy-crossed-out:hover {
+  --fancy-crossed-out-skew: 50;
+  --fancy-crossed-out-evenness: 0.55;
+  
+  /* --fancy-crossed-out-skew: -1;
+  --fancy-crossed-out-evenness: -1; */
+  
+}
+
+p.slashes-and-crossed-out {
+  background-image: paint(slashes-bg), paint(fancy-crossed-out);
 }
 
 /* Keyframes */

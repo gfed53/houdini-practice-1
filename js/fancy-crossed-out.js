@@ -19,7 +19,7 @@ class FancyCrossedOut {
     // console.log('line-height', props.get('line-height'));
 
     // add a slash to the first line.
-    // Was using 25 to accomodate for padding 
+    // Was using 25 to accomodate for padding
 
     let x = 0,
         xEnd = size.width,
@@ -53,13 +53,15 @@ class FancyCrossedOut {
 
       // Limit each zig-zag line slash width to content width
       while (xLeft < xEnd && debugCountX < 100) {
+
         // random scribble
-        if(props.get('--fancy-crossed-out-evenness').value === -1){
+        if (props.get('--fancy-crossed-out-evenness').value === -1) {
           evenness = Math.random();
         }
-        if(props.get('--fancy-crossed-out-skew').value === -1){
+        if (props.get('--fancy-crossed-out-skew').value === -1) {
           skew = Math.floor(Math.random() * 70);
         }
+
         let xRight = xLeft + skew;
         let xMid = xLeft + (skew / evenness);
         ctx.beginPath();
@@ -70,7 +72,7 @@ class FancyCrossedOut {
 
         xLeft = xRight;
         debugCountX++;
-        
+
         // console.log('debugCount', debugCount);
 
       }

@@ -14,28 +14,28 @@ class RoofBorder {
           bottomLeft = [10, size.height],
           bottomRight = [(size.width - 10), size.height];
 
-    // top left -> top right
+    // line: top left -> top right
 
     ctx.beginPath();
     ctx.moveTo(...topLeft);
     ctx.lineTo(...topRight);
     ctx.stroke();
 
-    // bottom left -> bottom right
+    // line: bottom left -> bottom right
 
     ctx.beginPath();
     ctx.moveTo(...bottomLeft);
     ctx.lineTo(...bottomRight);
     ctx.stroke();
 
-    // top left -> bottom left
+    // line: top left -> bottom left
 
     ctx.beginPath();
     ctx.moveTo(...topLeft);
     ctx.lineTo(...bottomLeft);
     ctx.stroke();
 
-    // top right -> bottom right
+    // line: top right -> bottom right
 
     ctx.beginPath();
     ctx.moveTo(...topRight);

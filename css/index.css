@@ -41,8 +41,7 @@ p {
 */
 
 h1.bg-dotted-underline {
-
-  background-image: paint(simonbg);
+  background-image: paint(dotted-underline);
   transition-property: --number-of-circles;
   transition-duration: 250ms;
 }

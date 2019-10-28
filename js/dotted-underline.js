@@ -1,4 +1,4 @@
-class SimonBg {
+class DottedUnderline {
 
   static get inputProperties() {
     return ['--number-of-circles'];
@@ -24,4 +24,4 @@ class SimonBg {
   }
 }
 
-registerPaint('simonbg', SimonBg);
+registerPaint('dotted-underline', DottedUnderline);

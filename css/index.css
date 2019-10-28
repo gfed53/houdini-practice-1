@@ -20,6 +20,7 @@ p {
   line-height: 1em;
 }
 
+
 /* Custom Properties Demo */
 
 .gradient-container {
@@ -31,9 +32,13 @@ p {
   --color-stop: black;
 }
 
+
 /* Painting API Demo */
 
-/* Taken from Simon's DesignCourse video on CSS Houdini */
+/*
+  Partially dotted underline
+  Taken from Simon's DesignCourse video on CSS Houdini
+*/
 
 h1.bg-dotted-underline {
 
@@ -76,29 +81,24 @@ p.fancy-crossed-out {
   transition-property: --fancy-crossed-out-skew, --fancy-crossed-out-evenness;
   transition-duration: 250ms;
 
-
   /* custom props (affect the paint function!) */
   --fancy-crossed-out-stroke-width: 1;
   --fancy-crossed-out-skew: 40;
   --fancy-crossed-out-evenness: 0.75;
 
-
-
 }
 
+/* Alternative design */
 p.fancy-crossed-out.random {
   /* Random scribble alternative */
   --fancy-crossed-out-skew: -1;
   --fancy-crossed-out-evenness: -1;
 }
 
+/* These should animate on hover! */
 p.fancy-crossed-out:hover {
   --fancy-crossed-out-skew: 50;
   --fancy-crossed-out-evenness: 0.55;
-
-  /* Random */
-  /* --fancy-crossed-out-skew: -1;
-  --fancy-crossed-out-evenness: -1; */
 
 }
 

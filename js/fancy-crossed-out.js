@@ -16,11 +16,6 @@ class FancyCrossedOut {
     // console.log('size', size);
     // console.log('props', props);
 
-    // console.log('line-height', props.get('line-height'));
-
-    // add a slash to the first line.
-    // Was using 25 to accomodate for padding
-
     let x = 0,
         xEnd = size.width,
         y = props.get('line-height').value * 0.66666,
@@ -31,11 +26,9 @@ class FancyCrossedOut {
         debugCountY = 0;
 
     // An example of the CSS Typed OM. Don't remove these logs!
-    // console.log('skew', skew);
-    // console.log('evenness', evenness);
-
-    // console.log('y', y);
-    // console.log('yEnd', yEnd);
+    console.log('line-height', props.get('line-height'));
+    console.log('skew', skew);
+    console.log('evenness', evenness);
 
     ctx.lineWidth = strokeWidth.value;
 

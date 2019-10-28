@@ -12,9 +12,9 @@ class FancyCrossedOut {
   }
 
   paint(ctx, size, props) {
-    console.log('ctx', ctx);
-    console.log('size', size);
-    console.log('props', props);
+    // console.log('ctx', ctx);
+    // console.log('size', size);
+    // console.log('props', props);
 
     // console.log('line-height', props.get('line-height'));
 
@@ -24,27 +24,28 @@ class FancyCrossedOut {
     let x = 0,
         xEnd = size.width,
         y = props.get('line-height').value * 0.66666,
-        yEnd = size.height,
         skew = props.get('--fancy-crossed-out-skew').value,
         evenness = props.get('--fancy-crossed-out-evenness').value,
         strokeWidth = props.get('--fancy-crossed-out-stroke-width'),
         lineHeightOffset = props.get('line-height').value,
-        lineCount = 0,
         debugCountY = 0;
 
     // An example of the CSS Typed OM. Don't remove these logs!
-    console.log('skew', skew);
-    console.log('evenness', evenness);
+    // console.log('skew', skew);
+    // console.log('evenness', evenness);
 
     // console.log('y', y);
     // console.log('yEnd', yEnd);
 
     ctx.lineWidth = strokeWidth.value;
 
-    // Make sure we limit line slashes to content height.
-    while (y < yEnd && debugCountY < 100) {
+    let totalLines = Math.round(size.height / props.get('line-height').value);
+
+    console.log('totalLines', totalLines);
+
+    for (let i = 0; i < totalLines; i++) {
       // console.log('y', y);
-      let yOffset = y + (lineCount * lineHeightOffset);
+      let yOffset = y + (i * lineHeightOffset);
       let xLeft = x;
 
       // for testing
@@ -73,12 +74,13 @@ class FancyCrossedOut {
         xLeft = xRight;
         debugCountX++;
 
-        // console.log('debugCount', debugCount);
+        // console.log('debugCountX', debugCountX);
 
       }
 
-      lineCount++;
+      // lineCount++;
       debugCountY++;
+      console.log('debugCountY', debugCountY);
     }
 
 

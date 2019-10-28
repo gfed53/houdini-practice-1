@@ -22,33 +22,35 @@ class FancyCrossedOut {
         skew = props.get('--fancy-crossed-out-skew').value,
         evenness = props.get('--fancy-crossed-out-evenness').value,
         strokeWidth = props.get('--fancy-crossed-out-stroke-width'),
-        lineHeightOffset = props.get('line-height').value,
-        debugCountY = 0;
+        lineHeight = props.get('line-height').value,
+        totalLines = Math.round(size.height / props.get('line-height').value),
+        // If I don't have this limit, I think the browser will crash for the random scribble.
+        fallbackXLimit = 0;
 
     // An example of the CSS Typed OM. Don't remove these logs!
-    console.log('line-height', props.get('line-height'));
-    console.log('skew', skew);
-    console.log('evenness', evenness);
+
+    // console.log('line-height', props.get('line-height'));
+    // console.log('skew', skew);
+    // console.log('evenness', evenness);
+
+    //
 
     ctx.lineWidth = strokeWidth.value;
 
-    let totalLines = Math.round(size.height / props.get('line-height').value);
+    // let totalLines = Math.round(size.height / props.get('line-height').value);
 
-    console.log('totalLines', totalLines);
+    // console.log('totalLines', totalLines);
 
     for (let i = 0; i < totalLines; i++) {
-      // console.log('y', y);
-      let yOffset = y + (i * lineHeightOffset);
-      let xLeft = x;
 
-      // for testing
-      let debugCountX = 0;
-
+      let yOffset = y + (i * lineHeight),
+          xLeft = x;
 
       // Limit each zig-zag line slash width to content width
-      while (xLeft < xEnd && debugCountX < 100) {
+      while (xLeft < xEnd && fallbackXLimit < 1000) {
 
-        // random scribble
+
+        // make it a random scribble
         if (props.get('--fancy-crossed-out-evenness').value === -1) {
           evenness = Math.random();
         }
@@ -56,8 +58,9 @@ class FancyCrossedOut {
           skew = Math.floor(Math.random() * 70);
         }
 
-        let xRight = xLeft + skew;
-        let xMid = xLeft + (skew / evenness);
+        let xRight = xLeft + skew,
+            xMid = xLeft + (skew / evenness);
+
         ctx.beginPath();
         ctx.moveTo(xLeft, yOffset);
         ctx.lineTo(xMid, (yOffset - 10));
@@ -65,15 +68,9 @@ class FancyCrossedOut {
         ctx.stroke();
 
         xLeft = xRight;
-        debugCountX++;
-
-        // console.log('debugCountX', debugCountX);
-
+        fallbackXLimit++;
       }
 
-      // lineCount++;
-      debugCountY++;
-      console.log('debugCountY', debugCountY);
     }
 
 

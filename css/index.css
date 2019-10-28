@@ -47,7 +47,7 @@ h1.bg-dotted-underline {
   transition-duration: 250ms;
 }
 
-h1:hover {
+h1.bg-dotted-underline:hover {
   --number-of-circles: 20;
 }
 
@@ -60,8 +60,8 @@ p.bg-slashes {
   transition-duration: 250ms;
 
   /* custom props (affect the paint function!) */
-  --stroke-color: rgba(230, 230, 230, 0.699);
-  --fill-color: rgba(230, 230, 230, 0.699);
+  --stroke-color: rgba(184, 184, 184, 0.699);
+  --fill-color: rgba(184, 184, 184, 0.699);
   --spacing: 30;
   --number-of-rects: 5;
   --slashes-bg-skew: 30;
@@ -83,23 +83,25 @@ p.fancy-crossed-out {
 
   /* custom props (affect the paint function!) */
   --fancy-crossed-out-stroke-width: 1;
-  --fancy-crossed-out-skew: 40;
-  --fancy-crossed-out-evenness: 0.75;
-
 }
 
-/* Alternative design */
-p.fancy-crossed-out.random {
+/* Basic design */
+p.fancy-crossed-out.basic {
   /* Random scribble alternative */
+  --fancy-crossed-out-skew: 50;
+  --fancy-crossed-out-evenness: 0.75;
+}
+
+/* Alternative design (random scribble) */
+p.fancy-crossed-out.random {
   --fancy-crossed-out-skew: -1;
   --fancy-crossed-out-evenness: -1;
 }
 
 /* These should animate on hover! */
-p.fancy-crossed-out:hover {
-  --fancy-crossed-out-skew: 50;
+p.fancy-crossed-out.basic:hover {
+  --fancy-crossed-out-skew: 60;
   --fancy-crossed-out-evenness: 0.55;
-
 }
 
 /* We can apply multiple worklets, just like with mulitple backgrounds */

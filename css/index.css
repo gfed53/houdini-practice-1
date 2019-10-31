@@ -120,16 +120,16 @@ p.slashes-and-crossed-out {
 /* Extra Stuff */
 
 
-
+/* 
 .shimmer-bg {
   border-radius: 15px;
   background: linear-gradient(to right, var(--color-gradient-1), var(--color-gradient-2), var(--color-gradient-3), var(--color-gradient-4));
-  /* animation: 3s ease-in infinite shimmerSlide; */
-}
+  animation: 3s ease-in infinite shimmerSlide;
+} */
 
 
 /* Keyframes */
-
+/* 
 @keyframes shimmerChange {
   0% {
     --color-shimmer: lightgrey;
@@ -163,4 +163,4 @@ p.slashes-and-crossed-out {
   8% {
     --color-gradient-4: transparent;
   }
-}
+} */

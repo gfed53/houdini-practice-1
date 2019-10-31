@@ -7,47 +7,11 @@ if (CSS.registerProperty) {
   });
 
   CSS.registerProperty({
-    name: '--color-shimmer',
-    syntax: '<color>',
-    initialValue: 'transparent',
-    inherits: false
-  });
-
-  CSS.registerProperty({
-    name: '--color-gradient-1',
-    syntax: '<color>',
-    initialValue: 'transparent',
-    inherits: false
-  });
-
-  CSS.registerProperty({
-    name: '--color-gradient-2',
-    syntax: '<color>',
-    initialValue: 'transparent',
-    inherits: false
-  });
-
-  CSS.registerProperty({
-    name: '--color-gradient-3',
-    syntax: '<color>',
-    initialValue: 'transparent',
-    inherits: false
-  });
-
-  CSS.registerProperty({
-    name: '--color-gradient-4',
-    syntax: '<color>',
-    initialValue: 'transparent',
-    inherits: false
-  });
-
-  CSS.registerProperty({
     name: '--number-of-circles',
     syntax: '<integer>',
     initialValue: '8',
     inherits: false
   });
-
 
   CSS.registerProperty({
     name: '--stroke-color',
@@ -111,4 +75,40 @@ if (CSS.registerProperty) {
     initialValue: '1',
     inherits: false
   });
+
+  // Extra
+  // CSS.registerProperty({
+  //   name: '--color-shimmer',
+  //   syntax: '<color>',
+  //   initialValue: 'transparent',
+  //   inherits: false
+  // });
+
+  // CSS.registerProperty({
+  //   name: '--color-gradient-1',
+  //   syntax: '<color>',
+  //   initialValue: 'transparent',
+  //   inherits: false
+  // });
+
+  // CSS.registerProperty({
+  //   name: '--color-gradient-2',
+  //   syntax: '<color>',
+  //   initialValue: 'transparent',
+  //   inherits: false
+  // });
+
+  // CSS.registerProperty({
+  //   name: '--color-gradient-3',
+  //   syntax: '<color>',
+  //   initialValue: 'transparent',
+  //   inherits: false
+  // });
+
+  // CSS.registerProperty({
+  //   name: '--color-gradient-4',
+  //   syntax: '<color>',
+  //   initialValue: 'transparent',
+  //   inherits: false
+  // });
 }

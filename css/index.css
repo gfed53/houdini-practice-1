@@ -42,12 +42,14 @@ p {
 
 h1.bg-dotted-underline {
   background-image: paint(dotted-underline);
-  transition-property: --number-of-circles;
+  --fill-color: red;
+  transition-property: --number-of-circles, --fill-color;
   transition-duration: 250ms;
 }
 
 h1.bg-dotted-underline:hover {
-  --number-of-circles: 20;
+  --number-of-circles: 15;
+  --fill-color: blue;
 }
 
 
@@ -58,7 +60,7 @@ p.bg-slashes {
   transition-property: --slashes-bg-skew, --number-of-rects;
   transition-duration: 250ms;
 
-  /* custom props (affect the paint function!) */
+  /* custom props (referenced in the paint method!) */
   --stroke-color: rgba(184, 184, 184, 0.699);
   --fill-color: rgba(184, 184, 184, 0.699);
   --spacing: 30;

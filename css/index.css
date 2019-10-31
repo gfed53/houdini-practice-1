@@ -24,6 +24,7 @@ p {
 /* Custom Properties Demo */
 
 .gradient-container {
+  --color-stop: maroon;
   background: linear-gradient(white, var(--color-stop));
   transition: --color-stop 1s;
 }
@@ -44,7 +45,7 @@ h1.bg-dotted-underline {
   background-image: paint(dotted-underline);
   --fill-color: red;
   transition-property: --number-of-circles, --fill-color;
-  transition-duration: 250ms;
+  transition-duration: 500ms;
 }
 
 h1.bg-dotted-underline:hover {

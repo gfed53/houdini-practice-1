@@ -1,4 +1,6 @@
 if (CSS.registerProperty) {
+
+
   CSS.registerProperty({
     name: '--color-stop',
     syntax: '<color>',

@@ -29,17 +29,13 @@ class FancyCrossedOut {
 
     // An example of the CSS Typed OM. Don't remove these logs!
 
-    // console.log('line-height', props.get('line-height'));
+    console.log('line-height', props.get('line-height'));
     // console.log('skew', skew);
     // console.log('evenness', evenness);
 
     //
 
     ctx.lineWidth = strokeWidth.value;
-
-    // let totalLines = Math.round(size.height / props.get('line-height').value);
-
-    // console.log('totalLines', totalLines);
 
     for (let i = 0; i < totalLines; i++) {
 
@@ -72,8 +68,6 @@ class FancyCrossedOut {
       }
 
     }
-
-
   }
 }
 

@@ -25,6 +25,7 @@ p {
 
 .gradient-container {
   --color-stop: maroon;
+
   background: linear-gradient(white, var(--color-stop));
   transition: --color-stop 1s;
 }
@@ -32,6 +33,8 @@ p {
 .gradient-container:hover {
   --color-stop: black;
 }
+
+
 
 
 /* Painting API Demo */
@@ -43,15 +46,19 @@ p {
 
 h1.bg-dotted-underline {
   background-image: paint(dotted-underline);
-  --fill-color: red;
   transition-property: --number-of-circles, --fill-color;
   transition-duration: 500ms;
+
+  --number-of-circles: 5;
+  --fill-color: red;
 }
 
 h1.bg-dotted-underline:hover {
   --number-of-circles: 15;
   --fill-color: blue;
 }
+
+
 
 
 /* Trailing skewed rects */
@@ -61,9 +68,12 @@ p.bg-slashes {
   transition-property: --slashes-bg-skew, --number-of-rects;
   transition-duration: 250ms;
 
+  /* this is just an unregistered custom property */
+  --my-grey: rgba(184, 184, 184, 0.699);
+
   /* custom props (referenced in the paint method!) */
-  --stroke-color: rgba(184, 184, 184, 0.699);
-  --fill-color: rgba(184, 184, 184, 0.699);
+  --stroke-color: var(--my-grey);
+  --fill-color: var(--my-grey);
   --spacing: 30;
   --number-of-rects: 5;
   --slashes-bg-skew: 30;
@@ -74,6 +84,8 @@ p.bg-slashes:hover {
   --slashes-bg-skew: 50;
   --number-of-rects: 10;
 }
+
+
 
 
 /* Scribbled out lines effect */

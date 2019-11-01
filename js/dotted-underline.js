@@ -10,7 +10,7 @@ class DottedUnderline {
   }
 
   paint(ctx, size, props) {
-    // console.log('ctx', ctx);
+    console.log('ctx', ctx);
     // console.log('size', size);
     // console.log('props', props);
 
